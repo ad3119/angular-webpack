@@ -1,0 +1,61 @@
+<table class="datatablecontent">
+  <thead>
+    <h2>Employees</h2>
+  </thead>
+  <tbody>
+  <tr>
+    <td>
+      <input *ngIf="config.filteringName" placeholder="Filter on Name"
+             [ngTableFiltering]="config.filteringName"
+             (tableChanged)="onChangeTable(config)"/>
+    </td>
+    <td>
+      <input *ngIf="config.filteringOffice" placeholder="Filter on Location"
+             [ngTableFiltering]="config.filteringOffice"
+             (tableChanged)="onChangeTable(config)"/>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <pagination *ngIf="config.paging"
+                  class="pagination-sm"
+                  [(ngModel)]="page"
+                  [totalItems]="length"
+                  [itemsPerPage]="itemsPerPage"
+                  [maxSize]="maxSize"
+                  [boundaryLinks]="true"
+                  [rotate]="false"
+                  (pageChanged)="onChangeTable(config, $event)"
+                  (numPages)="numPages = $event">
+      </pagination>
+    </td>
+    <td>
+      <pre *ngIf="config.paging" class="card card-block card-header">Page: {{page}} / {{numPages}} </pre>
+    </td>
+  </tr>
+  <tr><td colspan="2">Total number of employees: <b>{{length}}</b></td></tr>
+  <tr>
+    <td colspan="2">
+      <ngTable [config]="config.sorting"
+               (tableChanged)="onChangeTable(config)"
+               [rows]="rows" [columns]="columns">
+      </ngTable>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <br/>
+      <p><b>Sample usage of datatable component in combination with:
+        <ul>
+          <li>paged, sorted & filtered REST-full API.</li>
+          <li>Websocket push API for updates</li>
+        </ul>
+        </b></p>
+    </td>
+  </tr>
+  </tbody>
+</table>
+
+
+
+

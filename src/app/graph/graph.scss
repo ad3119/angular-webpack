@@ -1,0 +1,46 @@
+$font-stack:    Helvetica, sans-serif;
+
+:host .graph {
+  background: #eee;
+  padding: 3px;
+  width: 500px;
+  height: 130px;
+}
+
+:host .graph div {
+  width: 0;
+  transition: all 1s ease-out;
+  -moz-transition: all 1s ease-out;
+  -webkit-transition: all 1s ease-out;
+}
+
+:host .graph div {
+  font: 10px $font-stack;
+  background-color: steelblue;
+  text-align: right;
+  padding: 3px;
+  margin: 5px;
+  color: white;
+  box-shadow: 2px 2px 2px #666;
+}
+:host .title {
+  font-family: $font-stack;
+}
+
+:host .node circle {
+  fill: #fff;
+  stroke: steelblue;
+  stroke-width: 1.5px;
+}
+:host .node {
+  font: 10px $font-stack;
+}
+:host .link {
+  fill: none;
+  stroke: #ccc;
+  stroke-width: 1.5px;
+}
+
+:host .graphcontent{
+  margin-left: 10px;
+}

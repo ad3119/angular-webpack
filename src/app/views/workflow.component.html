@@ -1,0 +1,22 @@
+<div class="panel panel-primary">
+    <div class="panel-heading ">
+        Workflow Tasks ({{wftasksLength}})
+        
+        
+        <a class="pull-right"><span class="glyphicon glyphicon-cog"></span> </a>
+        <a (click)="toggle()" class="pull-right"><span class="{{ visible ? 'glyphicon glyphicon-minus' : 'glyphicon glyphicon-plus' }}"></span> </a>
+    </div>
+    <div class="panel-body" [hidden]="!visible">
+        <table class="table table-condensed table-striped table-bordered table-hover">
+            <tr >
+                <th *ngFor="#thead of theads ">{{thead}}</th>
+            </tr>
+            <tr *ngFor="#wf of workflowservices">
+                <td> {{wf.task}}</td>
+                <td> {{wf.warning}}</td>
+                <td> {{wf.inprogress}}</td>
+                <td> {{wf.failed}}</td>
+            </tr>
+        </table>
+    </div>
+</div>

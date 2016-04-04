@@ -1,0 +1,26 @@
+<div class="panel panel-primary">
+    <div class="panel-heading ">
+        TVV Queues
+        <a class="pull-right"><span class="glyphicon glyphicon-cog"></span> </a>
+        <a (click)="toggle()" class="pull-right"><span class="{{ visible ? 'glyphicon glyphicon-minus' : 'glyphicon glyphicon-plus' }}"></span> </a>
+    </div>
+    <div class="panel-body" [hidden]="!visible">
+        <table class="table table-condensed table-striped table-bordered table-hover">
+            <tr>
+                <th></th>
+                <th>Column head</th>
+                <th>Column head</th>
+            </tr>
+            <tr>
+                <td> Row Name</td>
+                <td> Value</td>
+                <td> Value</td>
+            </tr>
+            <tr>
+                <td> Row Name 2</td>
+                <td> Value</td>
+                <td> Value</td>
+            </tr>
+        </table>
+    </div>
+</div>

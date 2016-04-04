@@ -1,0 +1,21 @@
+<div class="panel panel-primary">
+    <div class="panel-heading ">
+        Distribution Lists ({{distrubtionTasksLength}})
+        <a class="pull-right"><span class="glyphicon glyphicon-cog"></span> </a>
+        <a (click)="toggle()" class="pull-right"><span class="{{ visible ? 'glyphicon glyphicon-minus' : 'glyphicon glyphicon-plus' }}"></span> </a>
+    </div>
+    <div class="panel-body" [hidden]="!visible">
+        <table class="table table-condensed table-striped table-bordered table-hover">
+            <tr>
+                <th>Distribution Name</th>
+                <th>In Progress</th>
+                <th>In Queue</th>
+            </tr>
+            <tr *ngFor="#wf of distributionServices">
+                <td> {{wf.task}}</td>
+                <td> {{wf.inprogress}}</td>
+                <td> {{wf.inqueue}}</td>
+            </tr>
+        </table>
+    </div>
+</div>

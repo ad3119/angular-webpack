@@ -1,0 +1,28 @@
+<div class="homecontent">
+  <span x-large>Your Content Here</span>
+  <input type="text" [value]="data.value" (input)="data.value = $event.target.value" autofocus>
+  <!--
+    Rather than wiring up two-way data-binding ourselves
+    we can use Angular's [(ngModel)] syntax
+    <input type="text" [(ngModel)]="title.value">
+  -->
+
+  <pre>this.data = {{ data | json }}</pre>
+</div>
+
+<h3 class="homecontent">Top Assets</h3>
+<div class="assets">
+  <ul class="assets">
+    <li *ngFor="#asset of assets"
+        (click)="gotoDetail(asset)">
+      <span class="asset">{{asset.id}}</span> {{asset.name}}
+    </li>
+  </ul>
+</div>
+
+<div class="homecontent">
+  <br/>
+  <p><b>Sample usage of Angular 2 data binding + navigation</b></p>
+</div>
+
+

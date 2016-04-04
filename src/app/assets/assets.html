@@ -1,0 +1,26 @@
+<table class="assetcontent">
+  <thead><h1>My Assets</h1></thead>
+  <tbody>
+  <tr>
+    <td class="assetlistcell">
+      <ul class="assets">
+        <li *ngFor="#asset of assetList"
+            (click)="onSelect(asset)"
+            [class.selected]="asset === selectedAsset">
+          <span class="asset">{{asset.id}}</span> {{asset.name}}
+        </li>
+      </ul>
+    </td>
+    <td class="assetdetailscell">
+      <assetdetails [asset]="selectedAsset"></assetdetails>
+    </td>
+  </tr>
+  <tr>
+    <td>
+        <br/>
+        <p><b>Sample usage of Angular 2 data binding + sub detail component</b></p>
+    </td>
+  </tr>
+  </tbody>
+</table>
+

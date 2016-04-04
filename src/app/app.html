@@ -1,0 +1,161 @@
+<header>
+  <div class="header navbar navbar-inverse "><!-- remove class navbar-fixed-top -->
+
+    <!-- BEGIN TOP NAVIGATION BAR -->
+    <div class="header-inner">
+      <!-- BEGIN LOGO -->
+      <div class="navbar-brand" href="#">
+        <img [src]="seachangeLogo" alt="logo" class="img-responsive" style="display:inline-block;">
+        <!--<i class="toggle"><a href="http://ux.schange.com/sguide/header_menu.htm#" class="open">-->
+        <!--<img [src]="menuToggler"></a></i>-->
+      </div>
+
+      <!-- END LOGO -->
+      <!-- BEGIN HORIZONTAL MENU -->
+      <!-- role facet menu -->
+            <!--<div class="hor-menu">-->
+                <!--<ul class="nav navbar-nav platform">-->
+                    <!--<li class="active">-->
+                        <!--<a data-toggle="dropdown" data-hover="dropdown" data-close-others="true" href="#">-->
+                        <!--Administration-->
+                        <!--<i class="fa fa-angle-down"></i>-->
+                        <!--</a>-->
+
+                        <!--<ul class="dropdown-menu">-->
+                            <!--<li><a href="#">Administration</a></li>-->
+                            <!--<li><a href="#">Operations</a></li>-->
+                            <!--<li><a href="#">Data Analytics</a></li>-->
+
+                        <!--</ul>-->
+
+                    <!--</li>-->
+
+                <!--</ul>-->
+            <!--</div>-->
+
+      <!-- begin platform navigation menu -->
+      <div class="hor-menu hidden-sm hidden-xs">
+        <ul class="nav navbar-nav">
+          <!--<li class="active">-->
+            <!--<a data-toggle="dropdown" data-hover="dropdown" data-close-others="true" href="http://ux.schange.com/sguide/header_menu.htm#">-->
+              <!--Overview-->
+              <!--<i class="fa fa-angle-down"></i>-->
+            <!--</a>-->
+            <!--<ul class="dropdown-menu">-->
+              <!--<li><a href="http://ux.schange.com/sguide/header_menu.htm#">Tasks</a></li>-->
+              <!--<li><a href="http://ux.schange.com/sguide/header_menu.htm#">System Status</a></li>-->
+              <!--<li><a href="http://ux.schange.com/sguide/header_menu.htm#">Reports</a></li>-->
+
+            <!--</ul>-->
+            <!--<span class="selected"></span>-->
+          <!--</li>-->
+          <!--<li>-->
+            <!--<a data-toggle="dropdown" data-close-others="true" href="http://ux.schange.com/sguide/header_menu.htm#">-->
+              <!--Assets-->
+            <!--</a>-->
+
+          <!--</li>-->
+          <li>
+            <a [routerLink]=" ['Home'] ">Home</a>
+          <li>
+          <li>
+            <a [routerLink]=" ['Index'] ">Index</a>
+          <li>
+          <li>
+            <a [routerLink]=" ['Graph'] ">Graph</a>
+          <li>
+          <li>
+            <a [routerLink]=" ['LogView'] ">Log Viewer</a>
+          <li>
+          <li>
+            <a [routerLink]=" ['Assets'] ">Assets</a>
+          <li>
+          <li>
+            <a [routerLink]=" ['DataTable'] ">Data Table</a>
+          <li>
+		  <li>
+            <a [routerLink]=" ['AssetComponent'] ">Asset 2</a>
+          <li>
+		  <li>
+            <a [routerLink]=" ['DashboardComponent'] ">Dashboard</a>
+          <li>
+          <li>
+            <a [routerLink]=" ['About'] ">About</a>
+          <li>
+            <a data-toggle="dropdown" data-hover="dropdown" data-close-others="true" href="">
+              Configurations
+              <i class="fa fa-angle-down"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="http://ux.schange.com/sguide/header_menu.htm#">Drop Boxes</a></li>
+              <li class="divider"></li>
+              <li><a href="http://ux.schange.com/sguide/header_menu.htm#">Sites</a></li>
+              <li><a href="http://ux.schange.com/sguide/header_menu.htm#">Site Groups</a></li>
+              <li class="divider"></li>
+              <li><a href="http://ux.schange.com/sguide/header_menu.htm#">External Content Tools</a></li>
+              <li><a href="http://ux.schange.com/sguide/header_menu.htm#">Global Parameters</a></li>
+              <li class="divider"></li>
+              <li><a href="http://ux.schange.com/sguide/header_menu.htm#">Users</a></li>
+              <li><a href="http://ux.schange.com/sguide/header_menu.htm#">Roles</a></li>
+              <li class="divider"></li>
+              <li><a href="http://ux.schange.com/sguide/header_menu.htm#">Audit Log</a></li>
+              <li><a href="http://ux.schange.com/sguide/header_menu.htm#">Backup</a></li>
+              <li><a href="http://ux.schange.com/sguide/header_menu.htm#">Providers</a></li>
+              <li><a href="http://ux.schange.com/sguide/header_menu.htm#">Metadata Templates</a></li>
+            </ul>
+          </li>
+
+
+
+        </ul>
+      </div>
+
+
+      <!-- END HORIZONTAL MENU -->
+      <!-- BEGIN RESPONSIVE MENU TOGGLER -->
+      <a href="javascript:;" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <img src="./AssetFlow UX Patterns_files/menu-toggler.png" alt="">
+      </a>
+      <!-- END RESPONSIVE MENU TOGGLER -->
+      <!-- BEGIN TOP NAVIGATION MENU -->
+      <ul class="nav navbar-nav pull-right">
+
+        <!-- BEGIN NOTIFICATION DROPDOWN -->
+        <li class="helplink"><a href="http://ux.schange.com/sguide/header_menu.htm#">Help</a></li>
+
+
+        <!-- END NOTIFICATION DROPDOWN -->
+
+
+        <!-- BEGIN USER LOGIN DROPDOWN -->
+        <li class="dropdown user">
+          <a href="http://ux.schange.com/sguide/header_menu.htm#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+            <img alt="John Long" [src]="avatar" width="29px;">
+            <span class="username">John Long</span>
+            <i class="fa fa-angle-down"></i>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a href="http://ux.schange.com/sguide/header_menu.htm#"><i class="fa fa-user"></i> My Profile</a></li>
+            <li class="divider"></li>
+            <li><a href="http://ux.schange.com/sguide/header_menu.htm#"><i class="fa fa-key"></i> Log Out</a></li>
+          </ul>
+        </li>
+        <!-- END USER LOGIN DROPDOWN -->
+      </ul>
+      <!-- END TOP NAVIGATION MENU -->
+    </div>
+    <!-- END TOP NAVIGATION BAR -->
+  </div>
+
+</header>
+<div class="container-fluid">
+<main>
+  <router-outlet></router-outlet>
+</main>
+</div>
+<footer class="footer" >
+  <div class="container text-center">
+    <div class="footertext"><p><i>E-CMS Front-end DEMO powered by Angular 2</i></p></div>
+    <img [src]="angularclassLogo"  class="footerimg">
+  </div>
+</footer>
